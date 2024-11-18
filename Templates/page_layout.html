@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>{{title}}</title>
+	<!-- Bootstrap core CSS -->
+	<!-- {{url_for('static', filename='line_plot.png')}} -->
+
+    <!-- <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet"> -->
+	<link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Fontawesome CSS -->
+<link href="{{ url_for('static', filename='css/all.css')}}" rel="stylesheet">	<!-- Custom styles for this template -->
+	<link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
+   <script src="https://d3js.org/d3.v7.min.js"></script>
+   <!-- v6 is also supported -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.2/d3.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-color/1.2.1/d3-color.js"></script>
+   <script src="https://d3js.org/d3.v6.min.js"></script>
+   <script src="https://unpkg.com/cal-heatmap/dist/cal-heatmap.min.js"></script>
+   <script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/cal-heatmap/dist/plugins/Tooltip.min.js"></script>
+<script src="https://unpkg.com/cal-heatmap/dist/plugins/Legend.min.js"></script>
+<script src="https://unpkg.com/cal-heatmap/dist/plugins/LegendLite.min.js"></script>
+<script src="https://unpkg.com/cal-heatmap/dist/plugins/CalendarLabel.min.js"></script>
+   <link rel="stylesheet" href="https://unpkg.com/cal-heatmap/dist/cal-heatmap.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark top-nav fixed-top" style="background-color:#263238; ">
+        <div class="container">
+            <a class="navbar-brand" href="home" style="width: min-content;">
+            <img src="{{url_for('static', filename='images/logo.png')}}" alt="" style="width: 220px;"/>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item {% if active_page == 'home' %}active{% endif %}">
+                     <a class="nav-link" href="home">City Data</a>
+                  </li>
+                  <li class="nav-item {% if active_page == 'india' %}active{% endif %}">
+                     <a class="nav-link" href="india_analysis">India Data</a>
+                  </li>
+                  <li class="nav-item {% if active_page == 'quotes' %}active{% endif %}">
+                     <a class="nav-link" href="quotes">More Info</a>
+                  </li>
+               </ul>
+            </div>
+        </div>
+    </nav>
+    
+    {% block body %} {% endblock %}
+    <!-- /.container -->
+    <!--footer starts from here-->
+    <footer class="footer">
+        
+        <div class="container" style="height: auto;">
+            <div class="footer-logo">
+				<!-- {{url_for('static', filename='line_plot.png')}} -->
+				<!-- <a href="#"><img src="images/footer-logo.png" alt="" /></a> -->
+				<img src="{{url_for('static', filename='images/footer-logo.png')}}" alt="" />
+
+			</div>
+            <!--foote_bottom_ul_amrc ends here-->
+            <p class="copyright text-center">All Rights Reserved. &copy; 2023 <a href="#"></a><br> Made with &hearts;
+				<!-- <a href="https://html.design/">html design</a> -->
+            </p>
+            <!-- <ul class="social_footer_ul">
+				<li><a href="#"><i class="fab fa-github"></i></a></li>
+				<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul> -->
+            <!--social_footer_ul ends here-->
+        </div>
+    </footer>
+	  
+<!-- Bootstrap core JavaScript -->
+<!-- <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script> -->
+<script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+</body>
+</html>
