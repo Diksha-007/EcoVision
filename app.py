@@ -53,11 +53,11 @@ def home():
 @ app.route('/quotes')
 def quotes():
     title = 'quotes'
-    quotes = ['EcoSense is an AI system that will provide real-time insights and visualizations into the current state of the environment. This information will help people understand the impact of human activity on the environment and take action to protect it.', 
+    quotes = ['EcoVision is an AI system that will provide real-time insights and visualizations into the current state of the environment. This information will help people understand the impact of human activity on the environment and take action to protect it.', 
               'The proposed project, EcoSense, will address the societal challenge of climate change and environmental degradation.',
-              ' Climate change is one of the most pressing issues of our time, and it is having a devastating impact on our planet. EcoSense will help us to understand the impact of climate change and other environmental problems, and it will empower us to take action to protect our planet.',
-              'With EcoSense, people will be able to see the impact of their actions on the environment and make informed decisions about how to live more sustainably. It is a system that will help us understand our planet and take action to protect it.',
-              'EcoSense is a tool that can help us to create a more sustainable future. It is the future of environmental monitoring.',
+              ' Climate change is one of the most pressing issues of our time, and it is having a devastating impact on our planet. EcoVision will help us to understand the impact of climate change and other environmental problems, and it will empower us to take action to protect our planet.',
+              'With EcoVision, people will be able to see the impact of their actions on the environment and make informed decisions about how to live more sustainably. It is a system that will help us understand our planet and take action to protect it.',
+              'EcoVision is a tool that can help us to create a more sustainable future. It is the future of environmental monitoring.',
               'It is still a protype and hence has a limited data.']
     active_page = 'quotes'
     return render_template('quotes.html',quotes=quotes, title=title, active_page=active_page)
